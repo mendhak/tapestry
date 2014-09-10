@@ -142,6 +142,10 @@ angular.module('tapestry.directives', [])
 
 										element.html(conf.content)
 
+										/* Compile Angular directives */
+
+										$compile(element.contents())(scope);
+
 										/* Trigger element added */
 										
 										if(count == totalcount) {
